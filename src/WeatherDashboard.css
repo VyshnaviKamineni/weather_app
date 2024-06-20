@@ -1,0 +1,123 @@
+.weather-dashboard {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 12px;
+  font-size: 16px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f9f9f986;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-weather:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.current-weather h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.current-weather .weather-info {
+  text-align: left;
+}
+
+.current-weather .weather-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.current-weather .weather-icon {
+  font-size: 64px;
+  color: #007bff;
+}
+
+.hourly-forecast {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hourly-forecast h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.forecast-item {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.forecast-item p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.forecast-item .weather-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #007bff; 
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
