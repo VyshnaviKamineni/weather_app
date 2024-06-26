@@ -1,19 +1,19 @@
-
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 .App-header {
   background-color: rgba(0, 0, 0, 0.582);
-  padding: 20px;
+  padding: 25px;
   color: white;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 }
 
 .App-header h1 {
@@ -22,16 +22,20 @@
 }
 
 nav {
-  margin: 20px 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 nav button {
-  margin: 0 10px;
+  margin-left: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border: none;
-  background-color:#28ad97;
+  background-color: #28ad97;
   color: white;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -48,7 +52,7 @@ main {
 }
 
 .App-footer {
-  background-color: rgba(0, 0, 0, 0.582); 
+  background-color: rgba(0, 0, 0, 0.582);
   color: white;
   padding: 10px;
   text-align: center;
@@ -58,4 +62,66 @@ main {
   font-size: 18px;
   color: #555;
   margin-top: 50px;
+}
+
+/* Media queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    position: static;
+    margin-top: 20px;
+    flex-direction: row; 
+    justify-content: center; 
+  }
+
+  nav button {
+    margin-left: 10px;
+    margin-top: 0; 
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .select-group-message {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+  .App-header {
+    padding: 15px;
+  }
+
+  nav {
+    position: static;
+    margin-top: 10px;
+    flex-direction: row; 
+    justify-content: center;
+  }
+
+  nav button {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .select-group-message {
+    font-size: 14px;
+    margin-top: 20px;
+  }
 }
